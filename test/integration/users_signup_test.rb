@@ -18,7 +18,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                          password_confirmation: "bar" } }
     end
     assert_template 'users/new'
-    assert_select 'form[action="/signup"]'  # to make sure it posts to the custome url, not the default 'users' url
+    # assert_select 'form[action="/signup"]'  # to make sure it posts to the custome url, not the default 'users' url
     assert_select 'div#error_explanation'
     assert_select 'div.alert.alert-danger'
   end
